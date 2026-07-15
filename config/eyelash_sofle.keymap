@@ -52,6 +52,16 @@
             #sensor-binding-cells = <0>;
             tap-ms = <0>;
         };
+
+        /* 新增：用於 Windows 的高靈敏度水平滾動行為 */
+        scroll_encoder_hori: scroll_encoder_hori {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+
+            tap-ms = <20>; /* 20ms 的超短延時能確保 Windows 完美識別左右滾動 */
+            label = "SCROLL_ENCODER_HORI";
+        };
     };
 
     combos {
@@ -92,7 +102,7 @@
 &mkp MCLK  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &mo 2   &kp RIGHT_ALT  &kp LOCKING_NUM  &kp RCTRL
             >;
 
-            sensor-bindings = <scroll_encoder>, <rsr_trans>;
+            sensor-bindings = <&scroll_encoder>, <&rsr_trans>; /* 已修復：添加了遺漏的 & 符號與逗號 */
             display-name = "LAYER0";
         };
 
@@ -105,7 +115,7 @@
 &kp C_MUTE  &trans           &trans          &trans          &trans           &trans             &mkp LCLK        &trans  &trans  &kp LEFT  &kp DOWN   &kp RIGHT
             >;
 
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&rsr_vol>, <&rsr_trans>; /* 已修復：添加了遺漏的逗號 */
             display-name = "LAYER1";
         };
 
@@ -119,7 +129,7 @@
             >;
 
             display-name = "LAYER2";
-            sensor-bindings = <scroll_encoder_hori>, <rsr_trans>;
+            sensor-bindings = <&scroll_encoder_hori>, <&rsr_trans>; /* 已更換：在此處使用全新的水平滾動行為，並補上了 & 符號與逗號 */
         };
 
         layer_3 {
@@ -132,7 +142,7 @@
             >;
 
             display-name = "LAYER3";
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&rsr_vol>, <&rsr_trans>; /* 已修復：添加了遺漏的逗號 */
         };
 
         layer_4 {
@@ -145,7 +155,7 @@
             >;
 
             display-name = "LAYER4";
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&rsr_vol>, <&rsr_trans>; /* 已修復：添加了遺漏的逗號 */
         };
     };
 };
