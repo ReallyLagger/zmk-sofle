@@ -63,7 +63,7 @@ layers:
   - $$mdi:keyboard-space$$
   - LAYER2
   - $$mdi:apple-keyboard-option$$
-  - LOCKING NUM
+  - KP NUM
   - $$mdi:apple-keyboard-control$$
   LAYER1:
   - {t: '`', s: '~'}
