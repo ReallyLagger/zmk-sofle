@@ -59,7 +59,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-            tap-ms = <100>; /* 20ms 的超短延時能確保 Windows 完美識別左右滾動 */
+            tap-ms = <20>; /* 20ms 的超短延時能確保 Windows 完美識別左右滾動 */
             label = "SCROLL_ENCODER_HORI";
         };
     };
