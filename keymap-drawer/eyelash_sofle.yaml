@@ -66,8 +66,8 @@ layers:
   - KP NUM
   - $$mdi:apple-keyboard-control$$
   LAYER1:
-  - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
