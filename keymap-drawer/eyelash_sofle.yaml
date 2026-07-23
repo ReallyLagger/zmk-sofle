@@ -63,7 +63,7 @@ layers:
   - $$mdi:keyboard-space$$
   - LAYER2
   - $$mdi:apple-keyboard-option$$
-  - KP NUM
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
   LAYER1:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -78,7 +78,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
